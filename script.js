@@ -7,27 +7,23 @@ let result = 0;
 let clickOperator = false;
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 const operators = ["+", "-", "*", "/", "%"];
-document.addEventListener(
-  "keydown",
-  (event) => {
-    let name = event.key;
+document.addEventListener("keydown", (event) => {
+  let name = event.key;
 
-    if (numbers.includes(name) || operators.includes(name)) {
-      handleOperations(name);
-    }
-    if (name === "Enter") {
-      history.textContent = equal();
-      display.innerHTML = equal();
-    }
-    if (name === "Backspace") {
-      del();
-    }
-    if (name === "Delete") {
-      clearDisplay();
-    }
-  },
-  false
-);
+  if (numbers.includes(name) || operators.includes(name)) {
+    handleOperations(name);
+  }
+  if (name === "Enter") {
+    history.textContent = equal();
+    display.innerHTML = equal();
+  }
+  if (name === "Backspace") {
+    del();
+  }
+  if (name === "Delete") {
+    clearDisplay();
+  }
+});
 
 for (let button of buttons) {
   button.onclick = (e) => {
