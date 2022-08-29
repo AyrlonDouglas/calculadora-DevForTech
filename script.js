@@ -19,6 +19,12 @@ document.addEventListener(
       history.textContent = equal();
       display.innerHTML = equal();
     }
+    if (name === "Backspace") {
+      del();
+    }
+    if (name === "Delete") {
+      clearDisplay();
+    }
   },
   false
 );
